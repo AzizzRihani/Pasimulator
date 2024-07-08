@@ -19,7 +19,6 @@ document.getElementById('date').innerHTML = d2;
 
 //document.getElementById('cde-ag').innerHTML = localStorage.getItem('codeAg');
 document.getElementById('n-ag').innerHTML = localStorage.getItem('agence');
-
 document.getElementById('n-as').innerHTML = localStorage.getItem('Name');
 var d3 = new Date(localStorage.getItem('DateNaissance'));
 var d4 = d3.getDate()+'/'+(d3.getMonth()+1)+'/'+d3.getFullYear();
@@ -105,7 +104,6 @@ else if(localStorage.getItem('TypeRT')==2){
     document.getElementById('RentType').innerHTML = "Rente viagère sur une tete" ;
     document.getElementById('remc1').innerHTML = formatMillier((parseFloat(localStorage.getItem('RenteSurTete1'))).toFixed(3))+' TND' ;
     document.getElementById('remc2').innerHTML = formatMillier((parseFloat(localStorage.getItem('RenteSurTete2'))).toFixed(3))+' TND' ;
-
 
 }
 
