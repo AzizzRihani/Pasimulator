@@ -440,6 +440,9 @@ function vv(){
     var f = document.getElementById('VersInit').value;
     localStorage.setItem("VersInit", f);
 
+    var o = document.getElementById('Verss').value;
+    localStorage.setItem("Verss", f);
+
     var TR = document.getElementById('inRevenu').value;
     //var select = document.getElementById('TrRev');
     //var TrRev = select.options[select.selectedIndex].text;
@@ -529,6 +532,7 @@ document.getElementById('SOMME2').innerHTML = formatMillier(parseFloat(sommeee))
 
 
     var f = document.getElementById('VersInit').value;
+    var o = document.getElementById('Verss').value;
     var c = document.getElementById('VersProg').value;
     var d = parseInt(document.getElementById('durObj').value);
     var v = document.getElementById('freqvers').value;

@@ -53,6 +53,9 @@ document.getElementById('TypeRT').addEventListener('change',function(){
 
    }
  });
+/////////////////////////////////TYPE DE VERSEMENT/////////////////////////////////////////////
+
+
 
 //////////////////////////////// TYPE DE LA RENTE ///////////////////////////////
 document.getElementById('TypeRT').addEventListener('input',function(){
@@ -97,7 +100,31 @@ document.getElementById('TypeRT').addEventListener('input',function(){
 
 
 });
-/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////TYPE DE VERSEMENT/////////////////////////////////
+
+document.getElementById('TypeV').addEventListener('input',function(){
+    var Type = document.getElementById('TypeV').value;
+    if(Type==0){
+        
+        document.getElementById("Verss").style.display = "inline";
+        document.getElementById("durObj").style.display = "inline";
+        document.getElementById("inDateSous").style.display = "inline";
+        document.getElementById("VersInit").style.display = "none";
+        document.getElementById("freqv").style.display = "none";
+        document.getElementById("VersProg").style.display = "none";
+        document.getElementById("Ech1").style.display = "none";
+    }
+    else
+    {
+        document.getElementById("Verss").style.display = "none";
+        document.getElementById("durObj").style.display = "inline";
+        document.getElementById("inDateSous").style.display = "inline";
+        document.getElementById("VersInit").style.display = "inline";
+        document.getElementById("freqv").style.display = "inline";
+        document.getElementById("VersProg").style.display = "inline";
+        document.getElementById("Ech1").style.display = "none";      
+    }
+});
 
 /////////////////////////////////////////// AGE ///////////////////////////////
 
@@ -440,6 +467,9 @@ function vv(){
     var f = document.getElementById('VersInit').value;
     localStorage.setItem("VersInit", f);
 
+    var o = document.getElementById('Verss').value;
+    localStorage.setItem("Verss", o);
+
     var TR = document.getElementById('inRevenu').value;
     //var select = document.getElementById('TrRev');
     //var TrRev = select.options[select.selectedIndex].text;
@@ -529,6 +559,7 @@ document.getElementById('SOMME2').innerHTML = formatMillier(parseFloat(sommeee))
 
 
     var f = document.getElementById('VersInit').value;
+    var o = document.getElementById('Verss').value;
     var c = document.getElementById('VersProg').value;
     var d = parseInt(document.getElementById('durObj').value);
     var v = document.getElementById('freqvers').value;
