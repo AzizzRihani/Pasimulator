@@ -441,7 +441,7 @@ function vv(){
     localStorage.setItem("VersInit", f);
 
     var o = document.getElementById('Verss').value;
-    localStorage.setItem("Verss", f);
+    localStorage.setItem("Verss", o);
 
     var TR = document.getElementById('inRevenu').value;
     //var select = document.getElementById('TrRev');
